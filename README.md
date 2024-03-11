@@ -18,3 +18,27 @@ excepcionApuestaMayorSaldo, salta si la apuesta es mayor que el saldo del jugado
 
 ClasesAbstractas:
 PrototipoJugador, tiene los atributos del jugador, 2 constructores al igualque la clase Jugador, los getters y setters y en el abstracto metodo clone 
+
+
+EJERCICIO2
+
+
+
+
+
+
+
+
+
+Ejercicio3
+
+Clases:
+
+FuncionesTablero, tiene un metodo para crear el tablero, otros dos que devuelven un numero random, otro para colocar el barco de forma horizontal y otro para ponerlo de forma vertical, un metodo el cual decide de forma aleatoria si el barco irá horizontal o vertical, el metodo para disparar, un metodo booleano de condicionesMaaritimas el cual podra o no cambiar la posicion del barco, un metodo para comprobar la victoria, otro para recomendar el disparo y finalmente un metodo para mostrar el tablero
+
+Main, la clase se encarga de desarrollar toda la logica de los metodos de FuncionesTablero, donde el usuario va a poder seguir disparando hasta ganar
+
+Excepciones:
+ExcepcionColumna0oNegativa, la cual saltará si se introduce un tamaño de columnas negativas
+
+ExcepcionDisparoFuera, salta si la posicion del disparo no está dentro del tamaño de la matriz
