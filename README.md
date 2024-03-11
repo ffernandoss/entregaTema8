@@ -10,8 +10,6 @@ Main, implementa la logica de las clases, donde se crea un jugador y un segundo 
 
 Jugador, hereda de prototipoJugador, tiene un constructor el cual inicializa los jugadores, y otro metodo el cual recibe un objeto de prototipoJugador, tambien tiene un toString y un metodo abstracto de tipo prototipoJugador llamado clone el cual devuelve un new Jugador
 
-
-Este ejercicio junto con el diagrama UML se encuentra dentro del paquete java en el modulo ejercicio1
 Excepciones:
 excepcionApuestaNegativa, salta si la apuesta es negativa
 excepcionApuestaMayorSaldo, salta si la apuesta es mayor que el saldo del jugador
@@ -19,6 +17,7 @@ excepcionApuestaMayorSaldo, salta si la apuesta es mayor que el saldo del jugado
 ClasesAbstractas:
 PrototipoJugador, tiene los atributos del jugador, 2 constructores al igualque la clase Jugador, los getters y setters y en el abstracto metodo clone 
 
+Este ejercicio junto con el diagrama UML se encuentra dentro del paquete java en el modulo ejercicio1
 
 EJERCICIO2
 
@@ -39,6 +38,14 @@ FuncionesTablero, tiene un metodo para crear el tablero, otros dos que devuelven
 Main, la clase se encarga de desarrollar toda la logica de los metodos de FuncionesTablero, donde el usuario va a poder seguir disparando hasta ganar
 
 Excepciones:
-ExcepcionColumna0oNegativa, la cual saltará si se introduce un tamaño de columnas negativas
+ExcepcionColumna0oNegativa, la cual saltará si se introduce un numero de columnas negativas
 
 ExcepcionDisparoFuera, salta si la posicion del disparo no está dentro del tamaño de la matriz
+
+ExcepcionDisparoNegativo, salta si la posicion del disparo es negativa
+
+ExcepcionFila0oNegativa, la cual saltará si se introduce un numero de filas negativas
+
+ExcepcionTamañoMinimoMatriz, la cual salta si el tamaño de la matriz es menor a 2x2
+
+Este ejercicio junto con el diagrama UML se encuentra dentro del paquete java en el modulo ejercicio2
