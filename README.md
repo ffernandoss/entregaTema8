@@ -49,3 +49,30 @@ ExcepcionFila0oNegativa, la cual saltará si se introduce un numero de filas neg
 ExcepcionTamañoMinimoMatriz, la cual salta si el tamaño de la matriz es menor a 2x2
 
 Este ejercicio junto con el diagrama UML se encuentra dentro del paquete java en el modulo ejercicio2
+
+
+ejercicio4
+
+Clases:
+
+BarcoIA, implementa de funcionesTablero, tiene un metodo donde la maquina coloca el barco, un metodo para disparar, el metodo de comprobar victoria, el de condiciones climaticas, resetear la posicion si el metodo de condiciones climaticas es true, sino no pasa nada
+
+BarcoPersona
+
+Main
+
+Tablero
+
+Excepciones:
+
+ExcepcionColumna0oNegativa, la cual saltará si se introduce un numero de columnas negativas
+
+ExcepcionColumnaFueraMatriz, salta si se quiere posicionar el barco en una columna que no esta en la matriz
+
+ExcepcionFila0oNegativa, la cual saltará si se introduce un numero de filas negativas
+
+ExcepcionFilaFueraMatriz, salta si se quiere posicionar el barco en una fila que no esta en la matriz
+
+Interfaz:
+
+FuncionesTablero
