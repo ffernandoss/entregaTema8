@@ -1,4 +1,4 @@
-package ejercicio1_prototype;
+package ejercicio1;
 
 public class Dado {
     public Dado(){

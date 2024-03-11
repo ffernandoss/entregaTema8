@@ -24,20 +24,20 @@ public class Pedidos {
     }
 
     public Pedidos clienteMasCompatible(List<Pedidos> todosLosPedidos) {
-        int maxObrasComunes = -1;
-        Pedidos clienteCompatible = null;
+        int contadorCompatibles = -1;
+        Pedidos masCompatible = null;
 
         for (Pedidos pedido : todosLosPedidos) {
             if (!pedido.cliente.equals(this.cliente)) {
                 int obrasComunes = contarObrasComunes(this, pedido);
-                if (obrasComunes > maxObrasComunes) {
-                    maxObrasComunes = obrasComunes;
-                    clienteCompatible = pedido;
+                if (obrasComunes > contadorCompatibles) {
+                    contadorCompatibles = obrasComunes;
+                    masCompatible = pedido;
                 }
             }
         }
 
-        return clienteCompatible;
+        return masCompatible;
     }
 
     public int contarObrasComunes(Pedidos cliente1, Pedidos cliente2) {

@@ -1,6 +1,4 @@
-package ejercicio1_prototype;
-
-import java.util.Arrays;
+package ejercicio1;
 
 public class Jugador extends PrototipoJugador{
 

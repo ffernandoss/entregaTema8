@@ -2,7 +2,7 @@ import org.junit.Test;
 
 
 import static org.junit.Assert.assertTrue;
-import ejercicio1_prototype.*;
+import ejercicio1.*;
 public class TestEjercicio1 {
     @Test
     public void testDado() {
