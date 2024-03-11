@@ -1,0 +1,56 @@
+@startuml
+
+class PrototipoJugador {
+  -nombre : String
+  -fichas : int
+  -dado : int
+  -animacion : String
+  +PrototipoJugador(nombre : String, fichas : int, dado : int, animacion : String)
+  +PrototipoJugador(prototipoJugador : PrototipoJugador)
+  +clone() : PrototipoJugador
+  +getNombre() : String
+  +setNombre(nombre : String) : void
+  +getFichas() : int
+  +setFichas(fichas : int) : void
+  +getDado() : int
+  +setDado(dado : int) : void
+  +getAnimacion() : String
+  +setAnimacion(animacion : String) : void
+}
+
+class Jugador {
+  +Jugador(nombre : String, fichas : int, dado : int, animacion : String)
+  +Jugador(prototipoJugador : PrototipoJugador)
+  +clone() : PrototipoJugador
+  +toString() : String
+}
+
+class Dado {
+  +Dado()
+  +lanzarDado(dado : int) : int
+  +comprobarGanador(resultado1 : int, resultado2 : int) : int
+  +cambiarFichas(resultado1 : int, resultado2 : int, apuesta1 : int, apuesta2 : int, jugador1 : PrototipoJugador, jugador2 : PrototipoJugador) : void
+  +comprobarSaldo(jugador1 : PrototipoJugador, jugador2 : PrototipoJugador) : void
+}
+
+class ExcepcionApuestaMayorSaldo {
+  +ExcepcionApuestaMayorSaldo()
+  +ExcepcionApuestaMayorSaldo(message : String)
+  +ExcepcionApuestaMayorSaldo(message : String, cause : Throwable)
+  +ExcepcionApuestaMayorSaldo(cause : Throwable)
+  +ExcepcionApuestaMayorSaldo(message : String, cause : Throwable, enableSuppression : boolean, writableStackTrace : boolean)
+}
+
+class ExcepcionApuestaNegativa {
+  +ExcepcionApuestaNegativa()
+  +ExcepcionApuestaNegativa(message : String)
+  +ExcepcionApuestaNegativa(message : String, cause : Throwable)
+  +ExcepcionApuestaNegativa(cause : Throwable)
+  +ExcepcionApuestaNegativa(message : String, cause : Throwable, enableSuppression : boolean, writableStackTrace : boolean)
+}
+
+Jugador --|> PrototipoJugador
+ExcepcionApuestaMayorSaldo --|> Exception
+ExcepcionApuestaNegativa --|> Exception
+
+@enduml

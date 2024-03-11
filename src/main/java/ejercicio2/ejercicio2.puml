@@ -1,0 +1,48 @@
+@startuml
+
+class Obra {
+  -titulo : String
+  -autor : String
+  +Obra(titulo : String, autor : String)
+  +getTitulo() : String
+  +setTitulo(titulo : String)
+  +getAutor() : String
+  +setAutor(autor : String)
+  +toString() : String
+}
+
+class Libros {
+  -numPaginas : int
+  +Libros(titulo : String, autor : String, numPaginas : int)
+  +getNumPaginas() : int
+  +setNumPaginas(numPaginas : int)
+  +toString() : String
+}
+
+class Videos {
+  -duracion : int
+  +Videos(titulo : String, autor : String, duracion : int)
+  +getDuracion() : int
+  +setDuracion(duracion : int)
+  +toString() : String
+}
+
+class Pedidos {
+  -cliente : String
+  -obrasCompradas : List<Obra>
+  +Pedidos(cliente : String)
+  +addObra(obra : Obra)
+  +mostrarPedidos()
+  +clienteMasCompatible(todosLosPedidos : List<Pedidos>) : Pedidos
+  +contarObrasComunes(cliente1 : Pedidos, cliente2 : Pedidos) : int
+  +getCliente() : String
+  +setCliente(cliente : String)
+  +getObrasCompradas() : List<Obra>
+  +setObrasCompradas(obrasCompradas : List<Obra>)
+}
+
+Obra <|-- Libros
+Obra <|-- Videos
+Pedidos "1" *-- "*" Obra
+
+@enduml

@@ -1,0 +1,76 @@
+@startuml
+
+class Main {
+    - ganar: int
+    - entrada: Scanner
+    - funcionesTablero: FuncionesTablero
+    - ejeX: int
+    - ejeY: int
+    - tablero: String[][]
+    - disparoX: int
+    - disparoY: int
+    + main(args: String[]): void
+}
+
+class FuncionesTablero {
+    + crearTablero(x: int, y: int): String[][]
+    + ObtenerEjeX(tablero: String[][]): int
+    + ObtenerEjeY(tablero: String[][]): int
+    + colocarBarcoIAHorizontal(tablero: String[][]): void
+    + colocarBarcoIAVertical(tablero: String[][]): void
+    + dondeVaBarco(tablero: String[][]): void
+    + dispararPersona(tablero: String[][], x: int, y: int): void
+    + condicionesMaritimas(): boolean
+    + comprobarVictoriaPersona(tablero: String[][]): int
+    + recomendarDisparo(tablero: String[][]): void
+    + mostrarTablero(tablero: String[][]): void
+}
+
+class ExcepcionTamañoMinimoMatriz {
+    + ExcepcionTamañoMinimoMatriz()
+    + ExcepcionTamañoMinimoMatriz(message: String)
+    + ExcepcionTamañoMinimoMatriz(message: String, cause: Throwable)
+    + ExcepcionTamañoMinimoMatriz(cause: Throwable)
+    + ExcepcionTamañoMinimoMatriz(message: String, cause: Throwable, enableSuppression: boolean, writableStackTrace: boolean)
+}
+
+class ExcepcionFila0oNegativa {
+    + ExcepcionFila0oNegativa()
+    + ExcepcionFila0oNegativa(message: String)
+    + ExcepcionFila0oNegativa(message: String, cause: Throwable)
+    + ExcepcionFila0oNegativa(cause: Throwable)
+    + ExcepcionFila0oNegativa(message: String, cause: Throwable, enableSuppression: boolean, writableStackTrace: boolean)
+}
+
+class ExcepcionDisparoNegativo {
+    + ExcepcionDisparoNegativo()
+    + ExcepcionDisparoNegativo(message: String)
+    + ExcepcionDisparoNegativo(message: String, cause: Throwable)
+    + ExcepcionDisparoNegativo(cause: Throwable)
+    + ExcepcionDisparoNegativo(message: String, cause: Throwable, enableSuppression: boolean, writableStackTrace: boolean)
+}
+
+class ExcepcionDisparoFueraMatriz {
+    + ExcepcionDisparoFueraMatriz()
+    + ExcepcionDisparoFueraMatriz(message: String)
+    + ExcepcionDisparoFueraMatriz(message: String, cause: Throwable)
+    + ExcepcionDisparoFueraMatriz(cause: Throwable)
+    + ExcepcionDisparoFueraMatriz(message: String, cause: Throwable, enableSuppression: boolean, writableStackTrace: boolean)
+}
+
+class ExcepcionColumna0oNegativa {
+    + ExcepcionColumna0oNegativa()
+    + ExcepcionColumna0oNegativa(message: String)
+    + ExcepcionColumna0oNegativa(message: String, cause: Throwable)
+    + ExcepcionColumna0oNegativa(cause: Throwable)
+    + ExcepcionColumna0oNegativa(message: String, cause: Throwable, enableSuppression: boolean, writableStackTrace: boolean)
+}
+
+Main --> FuncionesTablero
+FuncionesTablero --> ExcepcionTamañoMinimoMatriz
+FuncionesTablero --> ExcepcionFila0oNegativa
+FuncionesTablero --> ExcepcionDisparoNegativo
+FuncionesTablero --> ExcepcionDisparoFueraMatriz
+FuncionesTablero --> ExcepcionColumna0oNegativa
+
+@enduml

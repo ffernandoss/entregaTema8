@@ -1,0 +1,76 @@
+@startuml
+
+class Tablero {
+  +crearTablero(int, int) : String[][]
+  +mostrarTablero(String[][]) : void
+}
+
+class BarcoIA {
+  -random : Random
+  +ColocarBarcoIA(String[][]) : void
+  +DispararIA(String[][]) : void
+  +comprobarVictoria(String[][]) : boolean
+  +ObtenerEjeY(String[][]) : int
+  +ObtenerEjeX(String[][]) : int
+  +CondicionesClimaticas(String[][]) : void
+  +resetearPosicion(String[][]) : void
+  +NuevaPosicion(String[][]) : String[][]
+}
+
+class BarcoPersona {
+  -random : Random
+  +colocarBarco(String[][], int, int) : void
+  +dispararPersona(String[][], int, int) : void
+  +comprobarVictoria(String[][]) : boolean
+  +ObtenerEjeX(String[][]) : int
+  +ObtenerEjeY(String[][]) : int
+  +CondicionesClimaticas(String[][]) : void
+  +resetearPosicion(String[][]) : void
+  +NuevaPosicion(String[][]) : String[][]
+}
+
+class ExcepcionColumna0oNegativa {
+  +ExcepcionColumna0oNegativa()
+  +ExcepcionColumna0oNegativa(String)
+  +ExcepcionColumna0oNegativa(String, Throwable)
+  +ExcepcionColumna0oNegativa(Throwable)
+  +ExcepcionColumna0oNegativa(String, Throwable, boolean, boolean)
+}
+
+class ExcepcionColumnaFueraMatriz {
+  +ExcepcionColumnaFueraMatriz()
+  +ExcepcionColumnaFueraMatriz(String)
+  +ExcepcionColumnaFueraMatriz(String, Throwable)
+  +ExcepcionColumnaFueraMatriz(Throwable)
+  +ExcepcionColumnaFueraMatriz(String, Throwable, boolean, boolean)
+}
+
+class ExcepcionFila0oNegativa {
+  +ExcepcionFila0oNegativa()
+  +ExcepcionFila0oNegativa(String)
+  +ExcepcionFila0oNegativa(String, Throwable)
+  +ExcepcionFila0oNegativa(Throwable)
+  +ExcepcionFila0oNegativa(String, Throwable, boolean, boolean)
+}
+
+class ExcepcionFilaFueraMatriz {
+  +ExcepcionFilaFueraMatriz()
+  +ExcepcionFilaFueraMatriz(String)
+  +ExcepcionFilaFueraMatriz(String, Throwable)
+  +ExcepcionFilaFueraMatriz(Throwable)
+  +ExcepcionFilaFueraMatriz(String, Throwable, boolean, boolean)
+}
+
+interface FuncionesTablero {
+  +ObtenerEjeX(String[][]) : int
+  +ObtenerEjeY(String[][]) : int
+  +comprobarVictoria(String[][]) : boolean
+  +CondicionesClimaticas(String[][]) : void
+  +resetearPosicion(String[][]) : void
+  +NuevaPosicion(String[][]) : String[][]
+}
+
+BarcoIA ..|> FuncionesTablero
+BarcoPersona ..|> FuncionesTablero
+
+@enduml
