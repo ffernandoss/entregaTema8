@@ -10,6 +10,8 @@ Main, implementa la logica de las clases, donde se crea un jugador y un segundo 
 
 Jugador, hereda de prototipoJugador, tiene un constructor el cual inicializa los jugadores, y otro metodo el cual recibe un objeto de prototipoJugador, tambien tiene un toString y un metodo abstracto de tipo prototipoJugador llamado clone el cual devuelve un new Jugador
 
+
+Este ejercicio junto con el diagrama UML se encuentra dentro del paquete java en el modulo ejercicio1
 Excepciones:
 excepcionApuestaNegativa, salta si la apuesta es negativa
 excepcionApuestaMayorSaldo, salta si la apuesta es mayor que el saldo del jugador
