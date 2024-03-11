@@ -19,9 +19,21 @@ PrototipoJugador, tiene los atributos del jugador, 2 constructores al igualque l
 
 Este ejercicio junto con el diagrama UML se encuentra dentro del paquete java en el modulo ejercicio1
 
-EJERCICIO2
+Ejercicio2
 
+Clases:
 
+Libros, extiende de Obra, tiene un atributo numPaginas, un constructor getter y setter y un toString
+
+Main, crea un cliente con un libro y un pedido y lo añade a la lista de obras, luego se vuelve a hacer con un segundo cliente, y luego esos pedidos se añaden a una segunda lista de Pedidos, luego para un tercer cliente, se crea un libro y un video, luego con ese tercer cliente se busca al cliente mas compatible, y si lo hay muestra su libro y su video
+
+Obra, tiene 2 atributos titulo y autor, un constructor, getters,setters y el toString
+
+Pedidos, tiene un atributo llamado cliente, y una lista de obrass, un constructor, un metodo de añadir obra donde se añade la obra, uno para mostrar los pedidos, para buscar el cliente mas compatible y las obras comunes, tambien estan los getters y setters
+
+Videos, extiende de Obra, tiene un atributo duracion, un constructor getter y setter y un toString
+
+Este ejercicio junto con el diagrama UML se encuentra dentro del paquete java en el modulo ejercicio2
 
 
 
@@ -48,20 +60,20 @@ ExcepcionFila0oNegativa, la cual saltará si se introduce un numero de filas neg
 
 ExcepcionTamañoMinimoMatriz, la cual salta si el tamaño de la matriz es menor a 2x2
 
-Este ejercicio junto con el diagrama UML se encuentra dentro del paquete java en el modulo ejercicio2
+Este ejercicio junto con el diagrama UML se encuentra dentro del paquete java en el modulo ejercicio3
 
 
 ejercicio4
 
 Clases:
 
-BarcoIA, implementa de funcionesTablero, tiene un metodo donde la maquina coloca el barco, un metodo para disparar, el metodo de comprobar victoria, el de condiciones climaticas, resetear la posicion si el metodo de condiciones climaticas es true, sino no pasa nada
+BarcoIA, implementa de funcionesTablero, tiene un metodo donde la maquina coloca el barco, un metodo para disparar, el metodo de comprobar victoria, el de condiciones climaticas, resetear la posicion si el metodo de condiciones climaticas es true, sino no pasa nada, y un metodo para posicionar el barco en la nueva posicion
 
-BarcoPersona
+BarcoPersona, tambien implementa de FuncionesTablero, tiene los mismos metodos que BarcoIA ya que ambos implementan de la misma interfaz, pero desarrollados de forma distinta
 
-Main
+Main, implementa toda la logica para crear el barco del usuario, disparar y comprobar victoria
 
-Tablero
+Tablero, tiene el metodo de crear tablero y mostrar tablero
 
 Excepciones:
 
@@ -75,4 +87,9 @@ ExcepcionFilaFueraMatriz, salta si se quiere posicionar el barco en una fila que
 
 Interfaz:
 
-FuncionesTablero
+FuncionesTablero, tiene los metodos de obtener los randoms, condiciones climaticas, resetear posicion y colocar en la nueva posicion, los metodos de crear barco y disparar no están ya que reciben diferentes parametros
+
+Este ejercicio junto con el diagrama UML se encuentra dentro del paquete java en el modulo ejercicio4
+
+Tests
+dentro de la carpeta java del paquete test, estan las clases testEjercicio1, testEjercicio2, testEjercicio3 y testEjercicio4 para realizar pruebas
